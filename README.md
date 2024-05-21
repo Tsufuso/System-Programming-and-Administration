@@ -25,9 +25,11 @@ Shell Bash
 Système d'exploitation compatible avec Bash
 
 Assurez-vous que le script todo.sh est exécutable. Sinon, exécutez la commande suivante pour le rendre exécutable :
+
     chmod +x todo.sh
     
 Exécutez le script en utilisant la commande suivante :
+
     ./todo.sh
 
 ---------------------------------------------------------------------------------------------------------------------------------
