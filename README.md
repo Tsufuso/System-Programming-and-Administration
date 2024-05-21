@@ -1,24 +1,24 @@
 # System-Programming-and-Administration
 projet todo tasks
 
+Ce script vous aide à gérer vos tâches à faire. Il fournit une interface guidée par menu ainsi que des options de ligne de commande directe pour créer, mettre à jour, supprimer, afficher, lister et rechercher des tâches.
 
-Script de Gestion de Tâches
-Ce script Bash permet de gérer facilement les tâches à faire (todo tasks). Il offre plusieurs fonctionnalités telles que la création, la mise à jour, la suppression, l'affichage, la recherche et la liste des tâches.
+## Choix de Conception
 
----------------------------------------------------------------------------------------------------------------------------------
-# Fonctionnalités
-Création de tâches: Permet de créer une nouvelle tâche avec un titre, une description, une date d'échéance, un lieu et un statut de complétion.
+### Stockage des Données
+- **Stockage basé sur un fichier** : Les tâches sont stockées dans un fichier texte nommé `todo_tasks.txt` avec chaque tâche sur une ligne distincte (si il n'existe pas il sera creer automatiquement).
+- **Format des données** : Chaque tâche est stockée sous forme de chaîne délimitée par des pipes (`|`) avec les champs suivants :
+  - ID de la tâche
+  - Titre
+  - Description
+  - Localisation
+  - Date et heure d'échéance (format : YYYY-MM-DD HH:MM)
+  - Statut d'achèvement (Y/N)
 
-Mise à jour de tâches: Permet de mettre à jour les informations d'une tâche existante, y compris son titre, sa description, sa date d'échéance, son lieu et son statut de complétion.
-
-Suppression de tâches: Permet de supprimer une tâche existante en fonction de son identifiant unique.
-
-Affichage d'informations sur une tâche: Affiche les informations détaillées d'une tâche spécifique en fonction de son identifiant unique.
-
-Liste des tâches du jour: Affiche les tâches complétées et non complétées pour la journée en cours.
-
-Recherche de tâches par titre: Permet de rechercher des tâches en fonction de leur titre.
-
+### Organisation du Code
+- Le script est organisé en fonctions, chacune gérant une opération de tâche spécifique (créer, mettre à jour, supprimer, afficher, lister, rechercher).
+- Les fonctions sont définies en haut du script pour une référence et une réutilisation faciles.
+- La logique principale du script est contrôlée par une boucle `while` qui affiche un menu et traite les entrées utilisateur.
 ---------------------------------------------------------------------------------------------------------------------------------
 # Prérequis
 Shell Bash
