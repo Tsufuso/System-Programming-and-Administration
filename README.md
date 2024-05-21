@@ -90,4 +90,5 @@ Suivez les instructions pour fournir le titre à rechercher.
 Besoin d'aide ? :
 Exécutez la commande ./todo.sh help.
 Suivez les instructions pour savoir la syntaxe de chaque option.
-Merci.
+
+  Merci.
