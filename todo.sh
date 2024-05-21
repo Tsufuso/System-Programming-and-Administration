@@ -218,8 +218,15 @@ show_task() {
 # Function to list tasks of a specific day in two sections: completed and uncompleted
 
 list_tasks() {
-    echo "Enter the date (format: YYYY-MM-DD) to list tasks for:"
+    echo "Enter the date (format: YYYY-MM-DD) to list tasks for (leave empty for today):"
     read target_date
+
+    # If no date is provided, use today's date
+    if [[ -z $target_date ]]; then
+        target_date=$(date +'%Y-%m-%d')
+    fi
+
+    # Validate the format of the entered date
     if [[ ! $target_date =~ ^([0-9]{4})-([0-9]{2})-([0-9]{2})$ ]]; then
         echo "Error: Invalid date format. Please use YYYY-MM-DD" >&2
         return 1
